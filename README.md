@@ -7,7 +7,15 @@ This is a starter pnpm monorepo project.
 Run the following command:
 
 ```sh
+# download monorepo
+wget https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main.zip
+# or
+curl -L -O https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main.zip
+
+# install dependencies with pnpm
 pnpm i
+
+# generate your first app/package
 pnpm gen
 ```
 
