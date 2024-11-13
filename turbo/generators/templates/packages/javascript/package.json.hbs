@@ -1,0 +1,29 @@
+{
+  "name": "@monorepo/{{kebabCase name}}",
+  "version": "0.0.0",
+  "description": "{{sentenceCase description}}",
+  "keywords": [],
+  "main": "./src/index.js",
+  "module": "./src/index.js",
+  "files": [
+    "./dist"
+  ],
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "import": {
+          "default": "./dist/index.js",
+          "import": "./dist/index.js",
+          "require": "./dist/index.js"
+        }
+      }
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.4"
+  }
+}

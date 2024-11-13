@@ -1,0 +1,154 @@
+bin
+
+############################
+# Env
+############################
+
+**/.env
+
+############################
+# OS
+############################
+
+# Linux
+*~
+
+# Windows
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Mac OSX
+
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+############################
+# Windows
+############################
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+############################
+# Packages
+############################
+
+*.7z
+*.csv
+*.dat
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.seed
+*.so
+*.swo
+*.swp
+*.swn
+*.swm
+*.out
+*.pid
+
+############################
+# Misc.
+############################
+
+*#
+ssl
+.idea
+nbproject
+public/uploads/*
+!public/uploads/.gitkeep
+.tsbuildinfo
+.eslintcache
+
+############################
+# Node.js
+############################
+
+lib-cov
+lcov.info
+pids
+logs
+results
+node_modules
+.node_history
+
+############################
+# Logs and databases
+############################
+
+.tmp
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+############################
+# Tests
+############################
+
+coverage
+
+############################
+# Strapi
+############################
+
+license.txt
+exports
+.strapi
+dist
+build
+target
+
+.strapi-updater.json
+.strapi-cloud.json
+
+############################
+# Storybook
+############################
+
+*storybook.log
+
+############################
+# PNPM
+############################
+
+pnpm-debug.log*
+
+############################
+# Astro
+############################
+
+.astro/
+
+############################
+# Turbo
+############################
+
+.turbo
