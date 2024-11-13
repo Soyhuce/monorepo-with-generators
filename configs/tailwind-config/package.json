@@ -25,7 +25,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsup",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test": "vitest"
   },
   "peerDependencies": {
     "tailwindcss": "^3.4.14"
