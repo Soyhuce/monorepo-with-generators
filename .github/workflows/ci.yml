@@ -4,8 +4,10 @@ on:
     branches:
       - main
 
+env:
+  CI: true
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,9 +26,12 @@ jobs:
           cache: pnpm
           registry-url: https://registry.npmjs.org
 
-      - name: Install dependencies and generate apps and packages
+      - name: Install dependencies
         run: |
-          pnpm install --frozen-lockfile
+          pnpm install
+
+      - name: Generate apps and packages
+        run: |
           pnpm gen package --args typescript test-typescript
           pnpm gen package --args javascript test-javascript
           pnpm gen package --args typescript-react-ui test-typescript-react-ui
