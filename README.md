@@ -12,6 +12,11 @@ wget https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main
 # or
 curl -L -O https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main.zip
 
+cd main
+
+# set current node.js
+nvm use
+
 # install dependencies with pnpm
 pnpm i
 
