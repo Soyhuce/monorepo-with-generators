@@ -37,6 +37,10 @@ jobs:
           pnpm gen package --args typescript-react-ui test-typescript-react-ui
           pnpm gen application --args typescript-react-vite test-typescript-react-vite
 
+      - name: Security audit
+        run: |
+          pnpm run audit
+
       - name: Lint apps and packages
         run: |
           pnpm run lint
