@@ -5,7 +5,7 @@ import type { PlopTypes } from '@turbo/gen'
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setActionType('installDeps', function () {
     return new Promise((resolve, reject) => {
-      exec('pnpm i', (error, stdout, stderr) => {
+      exec('pnpm i --no-frozen-lockfile', (error, stdout, stderr) => {
         if (error) {
           console.error(`${error.message}`)
           reject(error)
