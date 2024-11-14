@@ -39,7 +39,7 @@ jobs:
 
       - name: Security audit
         run: |
-          pnpm run audit
+          pnpm audit
 
       - name: Lint apps and packages
         run: |
