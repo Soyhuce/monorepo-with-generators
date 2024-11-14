@@ -9,7 +9,7 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    children: 'Hello world',
+    children: 'Hello world'
   },
 } satisfies Meta<typeof Button>
 
