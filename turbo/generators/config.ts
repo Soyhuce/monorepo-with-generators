@@ -66,11 +66,6 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
     description: '🌐 Add a new application inside monorepo',
     prompts: [
       {
-        type: 'input',
-        name: 'name',
-        message: 'What is the name of the application?',
-      },
-      {
         type: 'list',
         name: 'type',
         message: 'What kind of application?',
@@ -78,6 +73,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           { name: 'Typescript Vite React (Typescript, Vite, React)', value: 'typescript-react-vite' },
           // { name: 'Typescript Astro React (Typescript, Vite, React)', value: 'typescript-astro-react' },
         ],
+      },
+      {
+        type: 'input',
+        name: 'name',
+        message: 'What is the name of the application?',
       },
     ],
     actions: [

@@ -1,0 +1,45 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 9
+          run_install: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies and generate apps and packages
+        run: |
+          pnpm install --frozen-lockfile
+          pnpm gen package --args typescript test-typescript
+          pnpm gen package --args javascript test-javascript
+          pnpm gen package --args typescript-react-ui test-typescript-react-ui
+          pnpm gen application --args typescript-react-vite test-typescript-react-vite
+
+      - name: Lint apps and packages
+        run: |
+          pnpm run lint
+
+      - name: Test apps and packages
+        run: |
+          pnpm run test
+
+      - name: Build apps and packages
+        run: |
+          pnpm run build

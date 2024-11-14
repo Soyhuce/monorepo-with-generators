@@ -87,6 +87,21 @@ importers:
 
   configs/typescript-config: {}
 
+  packages/test:
+    devDependencies:
+      '@monorepo/typescript-config':
+        specifier: workspace:*
+        version: link:../../configs/typescript-config
+      tsup:
+        specifier: ^8.3.5
+        version: 8.3.5(jiti@1.21.6)(postcss@8.4.49)(typescript@5.6.3)(yaml@2.6.0)
+      typescript:
+        specifier: ^5.6.3
+        version: 5.6.3
+      vitest:
+        specifier: ^2.1.4
+        version: 2.1.4(@types/node@22.9.0)(jsdom@25.0.1)
+
 packages:
 
   '@alloc/quick-lru@5.2.0':
