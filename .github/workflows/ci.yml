@@ -43,7 +43,7 @@ jobs:
 
       - name: Test apps and packages
         run: |
-          pnpm run test
+          pnpm run test -- -u
 
       - name: Build apps and packages
         run: |
