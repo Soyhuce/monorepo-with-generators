@@ -2,7 +2,7 @@
 
 This is a starter pnpm monorepo project.
 
-## Using this example
+## Using this monorepo
 
 Run the following command:
 
