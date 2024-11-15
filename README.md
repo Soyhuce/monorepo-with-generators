@@ -8,11 +8,8 @@ Run the following command:
 
 ```sh
 # download monorepo
-wget https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main.zip
-# or
-curl -L -O https://github.com/Soyhuce/monorepo-with-generators/archive/refs/heads/main.zip
-
-cd main
+pnpm dlx degit git@github.com:Soyhuce/monorepo-with-generators.git my-project
+cd my-project
 
 # set current node.js
 nvm use
