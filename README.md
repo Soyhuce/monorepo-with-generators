@@ -59,3 +59,11 @@ To develop all apps and packages, run the following command:
 ```
 pnpm dev
 ```
+
+### Test
+
+To test all apps and packages, run the following command:
+
+```
+pnpm test
+```
