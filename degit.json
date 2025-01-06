@@ -1,6 +1,9 @@
 [
 	{
 		"action": "remove",
-		"files": ["./degit.json", "./.github/**"]
+		"files": [
+      ".github",
+      "degit.json"
+    ]
 	}
 ]
