@@ -1,0 +1,21 @@
+---
+
+import { ClientRouter } from 'astro:transitions'
+
+---
+
+<html lang={Astro.currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <title>My awesome Astro website</title>
+    <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+    <meta content="width=device-width"name="viewport" />
+    <link href="/sitemap-index.xml" rel="sitemap" />
+    <ClientRouter />
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

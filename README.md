@@ -17,7 +17,7 @@ nvm use
 # install dependencies with pnpm
 pnpm i
 
-# generate your first app/package
+# generate your first app or package
 pnpm gen
 ```
 
@@ -66,4 +66,28 @@ To test all apps and packages, run the following command:
 
 ```
 pnpm test
+```
+
+### Lint
+
+To lint all apps and packages, run the following command:
+
+```
+pnpm lint
+```
+
+### Check
+
+To check dependencies for all apps and packages, run the following command:
+
+```
+pnpm check
+```
+
+### Check
+
+To update dependencies for all apps and packages, run the following command:
+
+```
+pnpm check -u
 ```

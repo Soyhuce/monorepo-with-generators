@@ -71,7 +71,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         message: 'What kind of application?',
         choices: [
           { name: 'Typescript Vite React (Typescript, Vite, React)', value: 'typescript-react-vite' },
-          // { name: 'Typescript Astro React (Typescript, Vite, React)', value: 'typescript-astro-react' },
+          { name: 'Typescript Astro React (Typescript, Vite, Astro)', value: 'typescript-astro-react' },
         ],
       },
       {
