@@ -28,6 +28,7 @@ This monorepo includes the following generators:
 ### Apps
 
 - `typescript-react-vite`: a [React.js](https://react.dev/) app
+- `typescript-astro-react`: a [Astro.js](https://astro.build/) and [React.js](https://react.dev/) app
 
 ### Packages
 
@@ -84,7 +85,7 @@ To check dependencies for all apps and packages, run the following command:
 pnpm check
 ```
 
-### Check
+### Update dependencies
 
 To update dependencies for all apps and packages, run the following command:
 
