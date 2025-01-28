@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react'
 
-import 'tailwindcss/tailwind.css'
+import 'tailwindcss/index.css'
 
 const preview: Preview = {
   parameters: {
@@ -38,8 +38,8 @@ const preview: Preview = {
     },
     controls: {
       matchers: {
-        color: /(?<temp1>background|color)$/iu,
-        date: /Date$/iu,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
   },
