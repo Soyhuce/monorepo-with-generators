@@ -5,7 +5,7 @@ import eslintPluginAstro from 'eslint-plugin-astro'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import tailwindcss from 'eslint-plugin-tailwindcss'
+// import tailwindcss from 'eslint-plugin-tailwindcss'
 
 const GLOB_TS = '**/*.?([cm])ts'
 const GLOB_TSX = '**/*.tsx'
@@ -34,14 +34,14 @@ export default [
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   ...eslintPluginAstro.configs['flat/all'],
-  ...tailwindcss.configs['flat/recommended'],
-  {
-    settings: {
-      tailwindcss: {
-        config: './configs/tailwind-config/src/index.ts',
-      },
-    },
-  },
+  // ...tailwindcss.configs['flat/recommended'],
+  // {
+  //   settings: {
+  //     tailwindcss: {
+  //       config: './configs/tailwind-config/src/index.ts',
+  //     },
+  //   },
+  // },
 
   // Code style rules
   stylistic.configs['disable-legacy'],
