@@ -1,3 +1,3 @@
-# @monorepo/tailwind-config
+# @monorepo/tailwind-config-2
 
 
