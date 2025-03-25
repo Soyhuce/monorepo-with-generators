@@ -93,6 +93,7 @@ export default [
   {
     ignores: [
       '**/node_modules',
+      '**/.astro',
       '**/dist',
       '**/coverage',
       '**/storybook-static',
