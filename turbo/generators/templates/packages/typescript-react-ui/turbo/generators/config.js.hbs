@@ -1,6 +1,12 @@
-import type { PlopTypes } from '@turbo/gen'
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { PlopTypes } from '@turbo/gen'
 
-export default function generator(plop: PlopTypes.NodePlopAPI): void {
+// @ts-check
+
+/**
+ * @param {PlopTypes.NodePlopAPI} plop
+ */
+export default function generator(plop) {
   plop.setGenerator('{{ kebabCase name }} component', {
     description: '🧩 Add component',
     prompts: [
