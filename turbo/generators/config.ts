@@ -39,8 +39,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
           { name: 'Typescript', value: 'typescript' },
           { name: 'Javascript', value: 'javascript' },
           {
-            name: 'Typescript React UI + Storybook',
-            value: 'typescript-react-ui',
+            name: 'Typescript React library',
+            value: 'typescript-react-library',
           },
         ],
       },
@@ -86,7 +86,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
             value: 'typescript-react-vite',
           },
           {
-            name: 'Typescript Astro React (Typescript, Vite, Astro)',
+            name: 'Typescript Astro React (Typescript, Vite, Astro, React)',
             value: 'typescript-astro-react',
           },
         ],

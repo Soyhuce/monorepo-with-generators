@@ -1,13 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { PlopTypes } from '@turbo/gen'
-
-// @ts-check
-
-/**
- * @param {PlopTypes.NodePlopAPI} plop
- */
+/** @param {import('@turbo/gen').PlopTypes.NodePlopAPI} plop */
 export default function generator(plop) {
-  plop.setGenerator('{{ kebabCase name }} component', {
+  plop.setGenerator('ui component', {
     description: '🧩 Add component',
     prompts: [
       {
@@ -29,36 +22,34 @@ export default function generator(plop) {
     actions: [
       {
         type: 'add',
-        path: 'src/components/\{{kebabCase type}}/\{{kebabCase name}}/\{{pascalCase name}}.tsx',
+        path: 'src/components/{{kebabCase type}}/{{kebabCase name}}/{{pascalCase name}}.tsx',
         templateFile: 'templates/component.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/\{{kebabCase type}}/\{{kebabCase name}}/\{{pascalCase name}}.stories.tsx',
+        path: 'src/components/{{kebabCase type}}/{{kebabCase name}}/{{pascalCase name}}.stories.tsx',
         templateFile: 'templates/stories.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/\{{kebabCase type}}/\{{kebabCase name}}/\{{pascalCase name}}.test.tsx',
+        path: 'src/components/{{kebabCase type}}/{{kebabCase name}}/{{pascalCase name}}.test.tsx',
         templateFile: 'templates/test.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/\{{kebabCase type}}/\{{kebabCase name}}/index.ts',
+        path: 'src/components/{{kebabCase type}}/{{kebabCase name}}/index.ts',
         templateFile: 'templates/index.hbs',
       },
       {
         type: 'add',
-        path: 'src/components/\{{kebabCase type}}/index.ts',
+        path: 'src/components/{{kebabCase type}}/index.ts',
         template: '',
-        // We just need to ensure the file exists. In case it already does, just
-        // silently go to the next action.
         skipIfExists: true,
       },
       {
         type: 'append',
-        path: 'src/components/\{{kebabCase type}}/index.ts',
-        template: `export * from './\{{kebabCase name}}'`,
+        path: 'src/components/{{kebabCase type}}/index.ts',
+        template: `export * from './{{kebabCase name}}'`,
       },
     ],
   })
