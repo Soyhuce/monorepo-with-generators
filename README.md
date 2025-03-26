@@ -43,7 +43,7 @@ Each package/app comes with [Vitest.js](https://vitest.dev/).
 This monorepo has some additional tools already setup for you:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
+- [Biome](https://biomejs.dev/) for code linting and formating
 
 ### Build
 

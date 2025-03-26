@@ -85,7 +85,6 @@ nbproject
 public/uploads/*
 !public/uploads/.gitkeep
 .tsbuildinfo
-.eslintcache
 
 ############################
 # Node.js

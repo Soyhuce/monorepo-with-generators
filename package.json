@@ -21,7 +21,6 @@
     "shx": "^0.4.0",
     "turbo": "^2.4.4",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.28.0",
     "vitest": "^3.0.9"
   },
   "packageManager": "pnpm@10.7.0",
