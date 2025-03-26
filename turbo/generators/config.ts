@@ -3,22 +3,27 @@ import { exec } from 'node:child_process'
 import type { PlopTypes } from '@turbo/gen'
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
-  plop.setActionType('installDeps', function () {
-    return new Promise((resolve, reject) => {
-      exec('pnpm i --no-frozen-lockfile', (error, stdout, stderr) => {
-        if (error) {
-          console.error(`${error.message}`)
-          reject(error)
-        }
-        if (stderr) {
-          console.error(`${stderr}`)
-          reject(new Error(stderr))
-        }
-        console.log(`${stdout}`)
-        resolve(stdout)
-      })
-    })
-  })
+  plop.setActionType(
+    'installDeps',
+    () =>
+      new Promise((resolve, reject) => {
+        exec(
+          'pnpm i --no-frozen-lockfile',
+          (error, stdout, stderr) => {
+            if (error) {
+              console.error(`${error.message}`)
+              reject(error)
+            }
+            if (stderr) {
+              console.error(`${stderr}`)
+              reject(new Error(stderr))
+            }
+            console.log(`${stdout}`)
+            resolve(stdout)
+          },
+        )
+      }),
+  )
 
   plop.setGenerator('package', {
     description: '📦 Add a new package inside monorepo',
@@ -30,7 +35,10 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         choices: [
           { name: 'Typescript', value: 'typescript' },
           { name: 'Javascript', value: 'javascript' },
-          { name: 'Typescript React UI + Storybook', value: 'typescript-react-ui' },
+          {
+            name: 'Typescript React UI + Storybook',
+            value: 'typescript-react-ui',
+          },
         ],
       },
       {
@@ -70,8 +78,14 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         name: 'type',
         message: 'What kind of application?',
         choices: [
-          { name: 'Typescript Vite React (Typescript, Vite, React)', value: 'typescript-react-vite' },
-          { name: 'Typescript Astro React (Typescript, Vite, Astro)', value: 'typescript-astro-react' },
+          {
+            name: 'Typescript Vite React (Typescript, Vite, React)',
+            value: 'typescript-react-vite',
+          },
+          {
+            name: 'Typescript Astro React (Typescript, Vite, Astro)',
+            value: 'typescript-astro-react',
+          },
         ],
       },
       {
