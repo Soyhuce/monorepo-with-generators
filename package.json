@@ -4,17 +4,18 @@
   "scripts": {
     "preinstall": "npx -y only-allow pnpm",
     "prepare": "husky",
-    "build": "turbo type-check build",
-    "dev": "turbo dev",
-    "test": "turbo test",
+    "build": "dotenv -- turbo type-check build",
+    "dev": "dotenv -- turbo dev",
+    "test": "dotenv -- turbo test",
     "clean": "turbo clean",
     "lint": "biome check",
-    "gen": "turbo gen",
+    "gen": "dotenv -- turbo gen",
     "check": "npm-check-updates --packageFile '**/package.{json,json.hbs}'"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@turbo/gen": "^2.4.4",
+    "dotenv-cli": "^8.0.0",
     "husky": "^9.1.7",
     "npm-check-updates": "^17.1.16",
     "shx": "^0.4.0",

@@ -3,6 +3,9 @@ import { exec } from 'node:child_process'
 import type { PlopTypes } from '@turbo/gen'
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
+  plop.setHelper('projectName', () => process.env.PROJECT_NAME)
+  plop.setHelper('currentYear', () => new Date().getFullYear())
+
   plop.setActionType(
     'installDeps',
     () =>

@@ -1,19 +1,17 @@
 {
-  "name": "@monorepo/tailwind-config",
+  "name": "tailwind-config",
   "version": "0.0.0",
   "description": "",
   "keywords": [],
-  "main": "./index.css",
+  "main": "./base.css",
+  "exports": {
+    ".": "./base.css",
+    "./base.css": "./base.css",
+    "./avocado.css": "./avocado.css"
+  },
+  "files": ["base.css", "avocado.css"],
   "publishConfig": {
-    "exports": {
-      ".": {
-        "import": {
-          "default": "./index.css",
-          "import": "./index.css",
-          "require": "./index.css"
-        }
-      }
-    }
+    "access": "public"
   },
   "license": "MIT",
   "peerDependencies": {

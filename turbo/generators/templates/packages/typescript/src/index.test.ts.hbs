@@ -2,6 +2,6 @@ import { helloWorld } from '.'
 
 describe('helloWorld', () => {
   it('should return string', () => {
-    expect(helloWorld).toBe('Hello from @monorepo/{{kebabCase name}}')
+    expect(helloWorld).toBe('@{{projectName}}/{{kebabCase name}}')
   })
 })

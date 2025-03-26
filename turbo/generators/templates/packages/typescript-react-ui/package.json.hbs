@@ -1,15 +1,12 @@
-
 {
-  "name": "@monorepo/{{kebabCase name}}",
+  "name": "@{{projectName}}/{{kebabCase name}}",
   "version": "0.0.0",
   "private": true,
   "type": "module",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "types": "./src/index.ts",
-  "files": [
-    "./dist"
-  ],
+  "files": ["./dist"],
   "publishConfig": {
     "exports": {
       ".": {
@@ -39,8 +36,6 @@
     "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
-    "@monorepo/tailwind-config": "workspace:*",
-    "@monorepo/typescript-config": "workspace:*",
     "@storybook/addon-essentials": "^8.6.9",
     "@storybook/addon-interactions": "^8.6.9",
     "@storybook/addon-onboarding": "^8.6.9",
@@ -61,8 +56,10 @@
     "eslint-plugin-storybook": "^0.11.6",
     "jsdom": "^26.0.0",
     "storybook": "^8.6.9",
+    "tailwind-config": "workspace:*",
     "tailwindcss": "^4.0.15",
     "typescript": "^5.8.2",
+    "typescript-config": "workspace:*",
     "vite": "^6.2.3",
     "vitest": "^3.0.9"
   }

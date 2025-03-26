@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --\*: initial;
+  --spacing: 4px;
+  --font-body: Inter, sans-serif;
+  --color--avocado: oklch(70% 0.1 173);
+}
